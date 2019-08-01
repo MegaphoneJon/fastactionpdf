@@ -15,7 +15,7 @@ class CRM_Fastactionpdf_Upgrader extends CRM_Fastactionpdf_Upgrader_Base {
   public function install() {
     // if CiviRules installed
     try {
-      $extensions = civicrm_api3('Extension', 'get');
+      $extensions = civicrm_api3('Extension', 'get', ['options' => ['limit' => 0]]);
       foreach ($extensions['values'] as $ext) {
         if ($ext['key'] == 'org.civicoop.civirules' && $ext['status'] == 'installed') {
           if (civicrm_api3('CiviRuleAction', 'getcount', ['name' => "fast_action_pdf"]) === 0) {
