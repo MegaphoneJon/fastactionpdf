@@ -45,8 +45,11 @@ class CRM_Fastactionpdf_CivirulesAction extends CRM_Pdfapi_CivirulesAction {
    * Pass in the FAL ID so we can return appropriate parameters via AJAX despite calling CiviExit.
    */
   protected function alterApiParameters($parameters, CRM_Civirules_TriggerData_TriggerData $triggerData) {
-    $parameters['fast_action_link_id'] = $triggerData->getEntityData('contact')['fast_action_link_id'];
-    $parameters = parent::alterApiParameters($parameters, $triggerData);
+    $entity = $triggerData->getEntity();
+    $entityData = $triggerData->getEntityData($entity);
+    $parameters['fast_action_link_id'] = $entityData['fast_action_link_id'];
+    $parameters['contribution_id'] = $entityData['contribution_id'];
+    $parameters['contact_id'] = $entityData['contact_id'];
     return $parameters;
   }
 
