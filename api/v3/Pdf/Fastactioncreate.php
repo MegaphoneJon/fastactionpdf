@@ -78,6 +78,7 @@ function _civicrm_api3_pdf_fastactioncreate_spec(&$spec) {
 function civicrm_api3_pdf_fastactioncreate($params) {
   $pdf = new CRM_Fastactionpdf($params);
   $pdf->create();
+  $pdf->processPdf();
   $returnValues = [];
   return civicrm_api3_create_success($returnValues, $params, 'Pdf', 'Fastactioncreate');
 }

@@ -42,4 +42,4 @@ When adding an action to a CiviRule with a trigger of "Fast Action Link", select
 
 ## Known Issues
 
-Some of the action parameters make no sense for a fast action PDF.  "Message template for the PDF" is the important paramter; creating activities SHOULD work but is currently untested.  To send an email, use the normal PDF API action.
+Some of the action parameters make no sense for a fast action PDF.  "Message template for the PDF" is the important parameter; creating activities SHOULD work but is currently untested.  To send an email, use the normal PDF API action.

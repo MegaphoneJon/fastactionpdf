@@ -15,10 +15,10 @@
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
   <releaseDate>2019-07-31</releaseDate>
-  <version>1.0</version>
+  <version>1.1</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.16</ver>
+    <ver>5.31</ver>
   </compatibility>
   <requires>
     <ext>com.megaphonetech.fastactionlinks</ext>
