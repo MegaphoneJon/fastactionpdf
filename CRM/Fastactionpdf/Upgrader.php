@@ -24,7 +24,7 @@ class CRM_Fastactionpdf_Upgrader extends CRM_Fastactionpdf_Upgrader_Base {
         }
       }
     }
-    catch (CiviCRM_API3_Exception $ex) {
+    catch (CRM_Core_Exception $ex) {
 
     }
   }
